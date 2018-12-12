@@ -39,7 +39,7 @@ By: Amit kumar
   Your public key has been saved in item.pub.
   The key fingerprint is:
   SHA256:GgXdnbdJ7h6vfYt0Q9OmhfQN1R7oL8Axu+cn1TSmwgk
-```
+  ```
 
 </details>
 
@@ -52,11 +52,16 @@ By: Amit kumar
 + Choose a preferred size. In this project, I have chosen the **1GB/1 vCPU/25GB** configuration.
 + In the section **Add Your SSH Keys**, paste the content of your public key, `item.pub`:
 + Click **Create** to create the droplet. This will take some time to complete. After the droplet has been created successfully, a public IP address will be assigned. In this project, the public IPv4 address that I have been assigned is `139.59.67.159`.
+
 </details>
 
 <details>
 <summary>Logging In as `root` via SSH and Updating the System</summary>
 
-+
++ you can now log into the server as `root`
+  ```console
+  ssh root@139.59.67.159
+  ```
+
 </details>
 # Installation
