@@ -56,12 +56,101 @@ By: Amit kumar
 </details>
 
 <details>
-<summary>Logging In as `root` via SSH and Updating the System</summary>
+<summary>Working on `root` and `grader` in host machine.</summary>
 
 + you can now log into the server as `root`
   ```console
   ssh root@139.59.67.159
   ```
++ Updating the System
+  ```
+  # apt update && apt upgrade
+  ```
++ Open the `/etc/ssh/sshd_config` file with `nano` or any other text editor of your choice:
+  ```
+   # nano /etc/ssh/sshd_config
+   ```
++ Restart the SSH server to reflect those changes:
+   ```
+   # service ssh restart
+   ```
++ To configure the timezone to use UTC, run the following command:
+
+  ```
+  # dpkg-reconfigure tzdata
+  ```
++ Creating the User `grader`
+  ```
+  # adduser grader
+  ```
++ Adding `grader` to the Group `sudo`
+  ```
+  # usermod -aG sudo grader
+  ```
++ Run the following command also to eliminate errors.
+  ```
+  $ sudo nano /etc/sudoers.d/grader
+  ```
+  then add ```grader ALL=(ALL:ALL) ALL``` to the file then save and quit.
++ log into the account of the user `grader` from your virtual server:
+```
+# su - grader
+```
++ Now enter the following commands to allow SSH access to the user `grader`:
+
+```
+$ mkdir .ssh
+$ chmod 700 .ssh
+$ touch .ssh/authorized_keys
+$ nano .ssh/authorized_keys
+```
+after paste public key from ~/.ssh/item.public
++ restrict the access for other users
+```
+$ chmod 644 authorized_keys
+```
 
 </details>
+
+<details>
+<summary>Disabling Root Login</summary>
+
++ Run following command:
+```
+$ exit
+$ $ ssh root@159.65.151.202 -p 2200
+# nano /etc/ssh/sshd_config
+# service ssh restart
+```
+
+</details>
+
+<details>
+<summary>Setting and Enable Up the Firewall</summary>
+
++ Run following command:
+```
+# sudo ufw allow 2200/tcp
+# sudo ufw allow 80/tcp
+# sudo ufw allow 123/udp
+# sudo ufw enable
+```
+
+</details>
+
+<details>
+<summary>Setup to install apache2,mod_wsgi and git</summary>
+
++ Run following command:
+```
+$ sudo apt-get update
+$ sudo apt-get install apache2
+$ sudo apt-get install libapache2-mod-wsgi python-dev
+$ sudo a2enmod wsgi
+$ sudo service apache2 start
+$ sudo apt-get install git
+```
+
+</details>
+
 # Installation
