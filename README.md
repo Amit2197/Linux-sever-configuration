@@ -42,6 +42,7 @@ By: Amit kumar
 ```
 
 </details>
+
 <details>
 <summary>Setting Up a DigitalOcean Droplet</summary>
 
@@ -53,9 +54,9 @@ By: Amit kumar
 + Click **Create** to create the droplet. This will take some time to complete. After the droplet has been created successfully, a public IP address will be assigned. In this project, the public IPv4 address that I have been assigned is `139.59.67.159`.
 </details>
 
-</details>
 <details>
-<summary>Setting Up a DigitalOcean Droplet</summary>
+<summary>Logging In as `root` via SSH and Updating the System</summary>
 
++
 </details>
 # Installation
