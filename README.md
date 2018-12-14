@@ -287,8 +287,8 @@ Clone the Udacity-item-catalog app from Github</summary>
 <details>
 <summary>Change file name and path:</summary>
 
-+ change file name application.py to __init__.py
-+ change path client_secrets.json to /var/www/catalo/Item_Catalog_Application/client_secrets.json in __init__.py
++ change file name application.py to &#95;&#95;init&#95;&#95;.py
++ change path client_secrets.json to /var/www/catalo/Item_Catalog_Application/client_secrets.json in &#95;&#95;init&#95;&#95;.py
 
 </details>
 
