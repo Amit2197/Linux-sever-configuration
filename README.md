@@ -75,7 +75,6 @@ By: Amit kumar
    # service ssh restart
    ```
 + To configure the timezone to use UTC, run the following command:
-
   ```
   # dpkg-reconfigure tzdata
   ```
@@ -93,22 +92,21 @@ By: Amit kumar
   ```
   then add ```grader ALL=(ALL:ALL) ALL``` to the file then save and quit.
 + log into the account of the user `grader` from your virtual server:
-```
-# su - grader
-```
+  ```
+  # su - grader
+  ```
 + Now enter the following commands to allow SSH access to the user `grader`:
-
-```
-$ mkdir .ssh
-$ chmod 700 .ssh
-$ touch .ssh/authorized_keys
-$ nano .ssh/authorized_keys
-```
-after paste public key from ~/.ssh/item.public
+  ```
+  $ mkdir .ssh
+  $ chmod 700 .ssh
+  $ touch .ssh/authorized_keys
+  $ nano .ssh/authorized_keys
+  ```
+  after paste public key from ~/.ssh/item.public
 + restrict the access for other users
-```
-$ chmod 644 authorized_keys
-```
+  ```
+  $ chmod 644 authorized_keys
+  ```
 
 </details>
 
@@ -116,12 +114,12 @@ $ chmod 644 authorized_keys
 <summary>Disabling Root Login</summary>
 
 + Run following command:
-```
-$ exit
-$ $ ssh root@159.65.151.202 -p 2200
-# nano /etc/ssh/sshd_config
-# service ssh restart
-```
+  ```
+  $ exit
+  $ $ ssh root@159.65.151.202 -p 2200
+  # nano /etc/ssh/sshd_config
+  # service ssh restart
+  ```
 
 </details>
 
@@ -129,12 +127,12 @@ $ $ ssh root@159.65.151.202 -p 2200
 <summary>Setting and Enable Up the Firewall</summary>
 
 + Run following command:
-```
-# sudo ufw allow 2200/tcp
-# sudo ufw allow 80/tcp
-# sudo ufw allow 123/udp
-# sudo ufw enable
-```
+  ```
+  # sudo ufw allow 2200/tcp
+  # sudo ufw allow 80/tcp
+  # sudo ufw allow 123/udp
+  # sudo ufw enable
+  ```
 
 </details>
 
@@ -142,14 +140,14 @@ $ $ ssh root@159.65.151.202 -p 2200
 <summary>Setup to install apache2,mod_wsgi and git</summary>
 
 + Run following command:
-```
-$ sudo apt-get update
-$ sudo apt-get install apache2
-$ sudo apt-get install libapache2-mod-wsgi python-dev
-$ sudo a2enmod wsgi
-$ sudo service apache2 start
-$ sudo apt-get install git
-```
+  ```
+  $ sudo apt-get update
+  $ sudo apt-get install apache2
+  $ sudo apt-get install libapache2-mod-wsgi python-dev
+  $ sudo a2enmod wsgi
+  $ sudo service apache2 start
+  $ sudo apt-get install git
+  ```
 
 </details>
 
