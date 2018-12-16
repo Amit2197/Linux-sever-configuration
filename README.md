@@ -7,7 +7,6 @@ By: Amit kumar
 &emsp;[&#x261B;Introduction](#introduction)  
 &emsp;[&#x261B;Server](#server-info)  
 &emsp;[&#x261B;Getting Started](#getting-started)  
-&emsp;[&#x261B;Installation](#installation)
 
 # Introduction
 &emsp;&emsp;This project take a baseline installation of a Linux server and prepare it to host Web applications.  
